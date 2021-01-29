@@ -1,4 +1,7 @@
-﻿using System;
+﻿using oop_fundamentals.Interfaces;
+using oop_fundamentals.Models;
+using System;
+using System.Collections.Generic;
 
 namespace oop_fundamentals
 {
@@ -6,7 +9,18 @@ namespace oop_fundamentals
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<ITaskAnswer> answers = new List<ITaskAnswer>();
+            answers.Add(new AddressAnswer());
+
+            foreach(var answer in answers)
+            {
+                ShowDivider();
+                answer.Process();
+                ShowDivider();
+            }
         }
+
+
+        static void ShowDivider() => Console.WriteLine(new string('=', 80));
     }
 }
