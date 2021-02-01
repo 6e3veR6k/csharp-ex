@@ -10,9 +10,10 @@ namespace oop_fundamentals
         static void Main(string[] args)
         {
             List<ITaskAnswer> answers = new List<ITaskAnswer>();
-            answers.Add(new AddressAnswer());
+            //answers.Add(new AddressAnswer());
+            answers.Add(new RectangleAnswer());
 
-            foreach(var answer in answers)
+            foreach (var answer in answers)
             {
                 ShowDivider();
                 answer.Process();
