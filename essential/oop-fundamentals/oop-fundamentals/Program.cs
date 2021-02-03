@@ -10,8 +10,7 @@ namespace oop_fundamentals
         static void Main(string[] args)
         {
             List<ITaskAnswer> answers = new List<ITaskAnswer>();
-            //answers.Add(new AddressAnswer());
-            answers.Add(new RectangleAnswer());
+            Initialize(answers);
 
             foreach (var answer in answers)
             {
@@ -21,7 +20,15 @@ namespace oop_fundamentals
             }
         }
 
-
+        
         static void ShowDivider() => Console.WriteLine(new string('=', 80));
+
+
+        private static void Initialize(List<ITaskAnswer> answers)
+        {
+            //answers.Add(new AddressAnswer());
+            //answers.Add(new RectangleAnswer());
+            answers.Add(new BookAnswer());
+        }
     }
 }
