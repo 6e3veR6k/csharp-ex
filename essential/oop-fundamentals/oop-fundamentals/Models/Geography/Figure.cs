@@ -15,6 +15,25 @@ namespace oop_fundamentals.Models.Geography
             }
         }
 
+        public string Name
+        {
+            get
+            {
+                return Enum.GetName(typeof(FigureTypes), points.Length);
+            }
+        }
+
+
+        private enum FigureTypes
+        {
+            Point,
+            Line,
+            Triangle,
+            Quadrilateral,
+            Pentagon,
+            Hexagon
+        }
+
         public Figure(Point point, Point point1, Point point2) : this(point, point1, point2, null, null)
         {
             Point[] _points = new Point[3];
