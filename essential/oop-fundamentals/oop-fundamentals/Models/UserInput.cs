@@ -8,14 +8,13 @@ namespace oop_fundamentals.Models
     public class UserInput
     {
         public string ConsoleMessage { get; private set; }
-        public Predicate<double> IsValidValue { get; set; }
 
         public UserInput(string message)
         {
             ConsoleMessage = message;
         }
 
-        public void GetUserValue(out double inputValue)
+        public void GetUserValue(out double inputValue, Predicate<double> isValidValue = null)
         {
             while(true)
             {
@@ -26,12 +25,12 @@ namespace oop_fundamentals.Models
                     continue;
                 }
 
-                if (IsValidValue == null)
+                if (isValidValue == null)
                 {
                     break;
                 }
 
-                if (IsValidValue(inputValue))
+                if (isValidValue(inputValue))
                 {
                     break;
                 }
@@ -42,7 +41,7 @@ namespace oop_fundamentals.Models
         }
 
 
-        public void GetUserValue(out int inputValue)
+        public void GetUserValue(out int inputValue, Predicate<double> isValidValue = null)
         {
             while (true)
             {
@@ -54,12 +53,12 @@ namespace oop_fundamentals.Models
                 }
 
 
-                if (IsValidValue == null)
+                if (isValidValue == null)
                 {
                     break;
                 }
 
-                if (IsValidValue(inputValue))
+                if (isValidValue(inputValue))
                 {
                     break;
                 }

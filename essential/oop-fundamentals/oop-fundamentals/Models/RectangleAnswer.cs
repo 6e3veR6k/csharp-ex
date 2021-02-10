@@ -24,8 +24,8 @@ namespace oop_fundamentals.Models
         {
             double rectangleFirstSide;
             UserInput consoleInput = new UserInput("Enter rectangle side: ");
-            consoleInput.IsValidValue += (x => x > 0 && !Double.IsInfinity(x) && x <= 100);
-            consoleInput.GetUserValue(out rectangleFirstSide);
+            
+            consoleInput.GetUserValue(out rectangleFirstSide, (x => x > 0 && !Double.IsInfinity(x) && x <= 100));
             return rectangleFirstSide;
         }
     }
