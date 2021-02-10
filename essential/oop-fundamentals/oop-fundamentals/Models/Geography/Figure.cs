@@ -19,7 +19,7 @@ namespace oop_fundamentals.Models.Geography
         {
             get
             {
-                return Enum.GetName(typeof(FigureTypes), points.Length);
+                return Enum.GetName(typeof(FigureTypes), points.Length - 1);
             }
         }
 

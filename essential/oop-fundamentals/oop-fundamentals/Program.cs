@@ -28,7 +28,8 @@ namespace oop_fundamentals
         {
             //answers.Add(new AddressAnswer());
             //answers.Add(new RectangleAnswer());
-            answers.Add(new BookAnswer());
+            //answers.Add(new BookAnswer());            
+            answers.Add(new FigureAnswer());
         }
     }
 }
