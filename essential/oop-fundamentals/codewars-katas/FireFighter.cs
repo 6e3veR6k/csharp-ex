@@ -8,7 +8,9 @@ namespace codewars_katas
     {
         public static string FireFight(string s)
         {
-            return s;
+            StringBuilder input = new StringBuilder(s);
+            input.Replace("Fire", "~~");
+            return input.ToString();
         }
     }
 }
